@@ -1,0 +1,29 @@
+<div class="container">
+  <main class="wrapper">
+    <form class="user-form" [formGroup]="form" (submit)="submit()">
+      <h1 class="title">Hello user</h1>
+
+      <label for="nickname" class="label">Nickname:
+        <input formControlName="nickname" type="text" class="input" id="nickname">
+      </label>
+
+      <label for="name" class="label">Name:
+        <input formControlName="name" type="text" class="input" id="name">
+      </label>
+
+
+      <label for="surname" class="label">Surname:
+        <input formControlName="surname" type="text" class="input" id="surname">
+      </label>
+
+
+      <label for="email" class="label">Email:
+        <input formControlName="email" type="text" class="input" id="email">
+      </label>
+
+
+      <button type="submit" class="btn submit-btn">Submit</button>
+
+    </form>
+  </main>
+</div>
