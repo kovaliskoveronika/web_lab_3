@@ -1,0 +1,26 @@
+<main class="main">
+  <div class="container">
+    <div class="wrapper">
+      <ul class="ticket__list">
+        <ng-container *ngIf="isTickets">
+          <ng-container *ngFor="let ticket of this.tickets">
+            <li class="ticket">
+              <span>{{ticket.id}}</span>
+              <p class="event-name">{{event.name}}</p>
+              <span>{{event.date | date:'medium'}}</span>
+              <span>{{ticket.price}} UAH</span>
+              <a (click)="buyTicket(ticket.id, $event)" class="btn buy-btn">BUY TICKET</a>
+            </li>
+            <hr/>
+          </ng-container>
+
+        </ng-container>
+
+        <ng-container *ngIf="!isTickets">
+          <li class="no-tickets">There is no available tickets</li>
+          <hr/>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</main>

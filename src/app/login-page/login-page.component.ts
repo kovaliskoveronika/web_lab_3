@@ -33,7 +33,7 @@ export class LoginPageComponent implements OnInit {
       next: (data) => {
         this.cookie.setCookie('access_token', data['access_token'],60);
         this.cookie.setCookie('user', JSON.stringify(data['user']), 60);
-        this.router.navigate(['/user']);
+        this.router.navigate(['/']);
       },
       error: (err => {
         if(err.status === 403){

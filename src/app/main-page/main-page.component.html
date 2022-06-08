@@ -1,0 +1,22 @@
+<main class="main">
+  <div class="container">
+    <div class="wrapper">
+
+      <ul class="card-list">
+
+        <li class="card" *ngFor="let event of events">
+          <a class="card-image" (click)="relocateToTicket(event)" target="_blank"
+             [ngStyle]="{'background-image': 'url('+event.image+')'}">
+          </a>
+          <a class="card-description" target="_blank" (click)="relocateToTicket(event)">
+            <h2>{{event.name}}</h2>
+            <p class="event-description">{{event.description}}</p>
+            <span>{{event.location}}</span>
+            <span>{{event.date | date:'medium'}}</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</main>

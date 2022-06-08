@@ -10,6 +10,9 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { RegPageComponent } from './reg-page/reg-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { TicketsPageComponent } from './tickets-page/tickets-page.component';
+import { MyTicketPageComponent } from './my-ticket-page/my-ticket-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { UserPageComponent } from './user-page/user-page.component';
     NavBarComponent,
     LoginPageComponent,
     RegPageComponent,
-    UserPageComponent
+    UserPageComponent,
+    MainPageComponent,
+    TicketsPageComponent,
+    MyTicketPageComponent
   ],
   imports: [
     BrowserModule,

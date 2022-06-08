@@ -69,6 +69,14 @@ export class UserPageComponent implements OnInit {
     });
   }
 
+  relocateToMyTicket(): void {
+    if (!this.cookie.getAuthToken()) {
+      alert("You should be logged")
+      return
+    }
+    this.router.navigate(['/my_tickets'])
+  }
+
   validate(user: { nickname: string, name: string, surname: string, email: string }) {
     const validateEmail = (email: string) => {
       return String(email)
